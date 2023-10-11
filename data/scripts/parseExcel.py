@@ -34,6 +34,7 @@ def getDataDict():
         "roundType": df["Round Type"][idx],
         "prompt": df["Prompt"][idx],
         "teamCaptain": df["Team Captain"][idx],
+        "promptId": df["Prompt ID"][idx]
     }
 
     newPrompt = AddOptionalParameters(df, idx, newPrompt, optionalParameters())

@@ -35,6 +35,9 @@ def createDynamoDBItem(prompt):
       "teamCaptain": {
           "S": filterItemValue(prompt["teamCaptain"]),
       },
+      "promptId": {
+          "N": filterItemValue(prompt["promptId"]),
+      }
   }
 
   for parameter in optionalParameters():
@@ -76,4 +79,4 @@ def sendDataToDB(data, tableName):
     print(response)
 
 
-sendDataToDB(getDataDict(), "wilty")
+sendDataToDB(getDataDict(), "wiltyDB")
